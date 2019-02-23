@@ -1,6 +1,4 @@
-<?php
-include "/inc/functions.php";
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,9 +8,10 @@ include "/inc/functions.php";
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <?php include "inc/functions.php"; ?>
   <div class="container">
     <div id="quote-box">
-	<?php printQuote();?>
+	<?php printQuote($quotes);?>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>

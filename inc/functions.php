@@ -1,3 +1,4 @@
+<?php 
 // PHP - Random Quote Generator
 
 // Create the Multidimensional array of quote elements and name it quotes
@@ -33,8 +34,27 @@ $quotes[] = array(
 );
 
 
-// Create the getRandomQuuote function and name it getRandomQuote
-
+// Create the getRandomQuote function and name it getRandomQuote
+function getRandomQuote($array){
+	$randomQuote[] = array_rand($array,1);
+	
+	$Quote = '';
+	//Add the Quote
+	$Quote .= "<p class='quote'>".$randomQuote['quote']."</p>";
+	//Open the Source
+	$Quote .= '<p class="source">'.$randomQuote['source'];
+	// Add Citation if available
+	$Quote .= '<span class="citation">'.$randomQuote['citation'].'</span>';
+	// Add Year if available
+	$Quote .= '<span class="year">'.$randomQuote['year'].'</span>';
+	// Close Source
+	$Quote .= "</p>";
+	return $Quote;
+}
 
 
 // Create the printQuote funtion and name it printQuote
+function printQuote(){
+	getRandomQuote($quotes);
+}
+?>

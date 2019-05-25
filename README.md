@@ -13,6 +13,9 @@ Random quote generator that pulls from a set of quotes.
 - [x] Quotes change after some time has passed (bonus)
 - [x] Background color changes with each quote
 
+### Customizations
+5/25/19 Start setting up functions into classes and unit testing
+
 ## Technologies Used
 * CSS
 * HTML
